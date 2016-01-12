@@ -1,0 +1,96 @@
+- !!eu.fp7.scase.inputParser.YamlResource
+  Name: gift
+  IsAlgorithmic: false
+  CRUDActivities: [Create, Read]
+  InputRepresentation: JSON
+  OutputRepresentation: JSON
+  Properties:
+  - Name: received
+    Type: String
+    Unique: false
+    NamingProperty: false
+  - Name: sent
+    Type: String
+    Unique: false
+    NamingProperty: false
+  RelatedResources: []
+
+- !!eu.fp7.scase.inputParser.YamlResource
+  Name: friend
+  IsAlgorithmic: false
+  CRUDActivities: [Read]
+  InputRepresentation: JSON
+  OutputRepresentation: JSON
+  Properties: []
+  RelatedResources: [gift, friendSelect]
+
+- !!eu.fp7.scase.inputParser.YamlResource
+  Name: friendSelect
+  IsAlgorithmic: true
+  CRUDActivities: []
+  InputRepresentation: JSON
+  OutputRepresentation: JSON
+  Properties: []
+  RelatedResources: []
+
+- !!eu.fp7.scase.inputParser.YamlResource
+  Name: category
+  IsAlgorithmic: false
+  CRUDActivities: [Read]
+  InputRepresentation: JSON
+  OutputRepresentation: JSON
+  Properties:
+  - Name: name
+    Type: String
+    Unique: false
+    NamingProperty: false
+  - Name: type
+    Type: String
+    Unique: false
+    NamingProperty: false
+  RelatedResources: [gift, categorySelect]
+
+- !!eu.fp7.scase.inputParser.YamlResource
+  Name: categorySelect
+  IsAlgorithmic: true
+  CRUDActivities: []
+  InputRepresentation: JSON
+  OutputRepresentation: JSON
+  Properties: []
+  RelatedResources: []
+
+- !!eu.fp7.scase.inputParser.YamlResource
+  Name: account
+  IsAlgorithmic: false
+  CRUDActivities: [Create]
+  InputRepresentation: JSON
+  OutputRepresentation: JSON
+  Properties:
+  - Name: password
+    Type: String
+    Unique: false
+    NamingProperty: false
+  - Name: username
+    Type: String
+    Unique: false
+    NamingProperty: false
+  RelatedResources: []
+
+- !!eu.fp7.scase.inputParser.YamlResource
+  Name: application
+  IsAlgorithmic: false
+  CRUDActivities: []
+  InputRepresentation: JSON
+  OutputRepresentation: JSON
+  Properties: []
+  RelatedResources: [applicationLogout]
+
+- !!eu.fp7.scase.inputParser.YamlResource
+  Name: applicationLogout
+  IsAlgorithmic: true
+  CRUDActivities: []
+  InputRepresentation: JSON
+  OutputRepresentation: JSON
+  Properties: []
+  RelatedResources: []
+
