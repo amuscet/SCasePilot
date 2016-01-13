@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:auth.storyboards="http:///auth/storyboards.ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
   <auth.storyboards:StoryboardDiagram xmi:id="_W9SB0HywEeW82oMd-Jh8qg">
-    <storyboardactions xmi:type="auth.storyboards:Action" xmi:id="_rQAUIHywEeW82oMd-Jh8qg" nextNode="_PExYAHyxEeW82oMd-Jh8qg" name="Get a list of friends"/>
-    <storyboardactions xmi:type="auth.storyboards:Action" xmi:id="_TBqEUHyxEeW82oMd-Jh8qg" nextNode="_F0aKcHyyEeW82oMd-Jh8qg" name="Get a list of categories"/>
-    <storyboardactions xmi:type="auth.storyboards:Action" xmi:id="_T2DgQHyyEeW82oMd-Jh8qg" nextNode="_dbPjwHywEeW82oMd-Jh8qg" name="Get a list of suggested gifts"/>
-    <storyboardconditions xmi:type="auth.storyboards:Condition" xmi:id="_PExYAHyxEeW82oMd-Jh8qg" name="Choose a friend ">
+    <storyboardactions xmi:type="auth.storyboards:Action" xmi:id="_rQAUIHywEeW82oMd-Jh8qg" nextNode="_PExYAHyxEeW82oMd-Jh8qg" name="Read a list of friends"/>
+    <storyboardactions xmi:type="auth.storyboards:Action" xmi:id="_TBqEUHyxEeW82oMd-Jh8qg" nextNode="_F0aKcHyyEeW82oMd-Jh8qg" name="Read a gift category"/>
+    <storyboardactions xmi:type="auth.storyboards:Action" xmi:id="_T2DgQHyyEeW82oMd-Jh8qg" nextNode="_5XZFwLneEeWM09hGPClOkQ" name="Read gifts"/>
+    <storyboardactions xmi:type="auth.storyboards:Action" xmi:id="_5XZFwLneEeWM09hGPClOkQ" nextNode="_dbPjwHywEeW82oMd-Jh8qg" name="Buy gift"/>
+    <storyboardconditions xmi:type="auth.storyboards:Condition" xmi:id="_PExYAHyxEeW82oMd-Jh8qg" name="Select a friend ">
       <conditionPaths xmi:type="auth.storyboards:ConditionPath" xmi:id="_T-_2UHyxEeW82oMd-Jh8qg" name="Yes" nextConditionNode="_TBqEUHyxEeW82oMd-Jh8qg"/>
       <conditionPaths xmi:type="auth.storyboards:ConditionPath" xmi:id="_1P2zAHyxEeW82oMd-Jh8qg" name="No" nextConditionNode="_rQAUIHywEeW82oMd-Jh8qg"/>
     </storyboardconditions>
-    <storyboardconditions xmi:type="auth.storyboards:Condition" xmi:id="_F0aKcHyyEeW82oMd-Jh8qg" name="Choose a category">
+    <storyboardconditions xmi:type="auth.storyboards:Condition" xmi:id="_F0aKcHyyEeW82oMd-Jh8qg" name="Select a category">
       <conditionPaths xmi:type="auth.storyboards:ConditionPath" xmi:id="_V_7W0HyyEeW82oMd-Jh8qg" name="No" nextConditionNode="_TBqEUHyxEeW82oMd-Jh8qg"/>
       <conditionPaths xmi:type="auth.storyboards:ConditionPath" xmi:id="_bvUikHyyEeW82oMd-Jh8qg" name="Yes" nextConditionNode="_T2DgQHyyEeW82oMd-Jh8qg"/>
     </storyboardconditions>
@@ -26,7 +27,7 @@
       <styles xmi:type="notation:DescriptionStyle" xmi:id="_dbQK0XywEeW82oMd-Jh8qg"/>
       <styles xmi:type="notation:FontStyle" xmi:id="_dbQK0nywEeW82oMd-Jh8qg" fontName="Segoe UI"/>
       <styles xmi:type="notation:LineStyle" xmi:id="_dbQK03ywEeW82oMd-Jh8qg"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dbQK1HywEeW82oMd-Jh8qg" x="744" y="468"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dbQK1HywEeW82oMd-Jh8qg" x="732" y="540"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_rQA7MHywEeW82oMd-Jh8qg" type="2006" element="_rQAUIHywEeW82oMd-Jh8qg" fontName="Segoe UI">
       <children xmi:type="notation:DecorationNode" xmi:id="_rQA7MnywEeW82oMd-Jh8qg" type="5005"/>
@@ -52,7 +53,11 @@
     </children>
     <children xmi:type="notation:Shape" xmi:id="_T2DgQXyyEeW82oMd-Jh8qg" type="2006" element="_T2DgQHyyEeW82oMd-Jh8qg" fontName="Segoe UI">
       <children xmi:type="notation:DecorationNode" xmi:id="_T2EHUHyyEeW82oMd-Jh8qg" type="5005"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T2DgQnyyEeW82oMd-Jh8qg" x="660" y="360" width="169" height="49"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T2DgQnyyEeW82oMd-Jh8qg" x="684" y="360" width="133" height="49"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_5XZFwbneEeWM09hGPClOkQ" type="2006" element="_5XZFwLneEeWM09hGPClOkQ" fontName="Segoe UI">
+      <children xmi:type="notation:DecorationNode" xmi:id="_5XZFw7neEeWM09hGPClOkQ" type="5005"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5XZFwrneEeWM09hGPClOkQ" x="708" y="456"/>
     </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_W9SB0nywEeW82oMd-Jh8qg"/>
     <edges xmi:type="notation:Connector" xmi:id="_K3xMEHyxEeW82oMd-Jh8qg" type="4004" source="_c7-04HywEeW82oMd-Jh8qg" target="_rQA7MHywEeW82oMd-Jh8qg">
@@ -107,11 +112,18 @@
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_bvXl4HyyEeW82oMd-Jh8qg" id="(0.5170068027210885,0.8571428571428571)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_bvXl4XyyEeW82oMd-Jh8qg" id="(0.5029585798816568,0.7959183673469388)"/>
     </edges>
-    <edges xmi:type="notation:Connector" xmi:id="_f58I4HyyEeW82oMd-Jh8qg" type="4006" source="_T2DgQXyyEeW82oMd-Jh8qg" target="_dbQK0HywEeW82oMd-Jh8qg">
-      <styles xmi:type="notation:FontStyle" xmi:id="_f58I4XyyEeW82oMd-Jh8qg" fontName="Segoe UI"/>
+    <edges xmi:type="notation:Connector" xmi:id="_7QD3kLneEeWM09hGPClOkQ" type="4006" source="_T2DgQXyyEeW82oMd-Jh8qg" target="_5XZFwbneEeWM09hGPClOkQ">
+      <styles xmi:type="notation:FontStyle" xmi:id="_7QD3kbneEeWM09hGPClOkQ" fontName="Segoe UI"/>
       <element xsi:nil="true"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_f58I4nyyEeW82oMd-Jh8qg" points="[3, 9, -4, -69]$[3, 68, -4, -10]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_f59XAHyyEeW82oMd-Jh8qg" id="(0.514792899408284,0.8163265306122449)"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_7QD3krneEeWM09hGPClOkQ" points="[6, 25, 0, -71]$[6, 96, 0, 0]"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_7QD3k7neEeWM09hGPClOkQ" id="(0.4857142857142857,0.125)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_8PcQ8LneEeWM09hGPClOkQ" type="4006" source="_5XZFwbneEeWM09hGPClOkQ" target="_dbQK0HywEeW82oMd-Jh8qg">
+      <styles xmi:type="notation:FontStyle" xmi:id="_8PcQ8bneEeWM09hGPClOkQ" fontName="Segoe UI"/>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_8PcQ8rneEeWM09hGPClOkQ" points="[6, 0, 0, -117]$[6, 116, 0, -1]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8PcQ87neEeWM09hGPClOkQ" id="(0.5285714285714286,0.95)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8PcQ9LneEeWM09hGPClOkQ" id="(0.65,0.05)"/>
     </edges>
   </notation:Diagram>
 </xmi:XMI>
