@@ -2,11 +2,63 @@
   Name: gift
   IsAlgorithmic: false
   IsExternalService: false
-  CRUDActivities: [Create, Read]
+  CRUDActivities: [Read]
   InputRepresentation: JSON
   OutputRepresentation: JSON
   Properties:
-  - Name: sender
+  - Name: nameofbook
+    Type: String
+    Unique: true
+    NamingProperty: false
+  - Name: descriptionofevent
+    Type: String
+    Unique: true
+    NamingProperty: false
+  - Name: eventstart
+    Type: String
+    Unique: true
+    NamingProperty: false
+  - Name: nameofmovie
+    Type: String
+    Unique: true
+    NamingProperty: false
+  - Name: bookpublisher
+    Type: String
+    Unique: true
+    NamingProperty: false
+  - Name: eventcountry
+    Type: String
+    Unique: true
+    NamingProperty: false
+  - Name: priceofbook
+    Type: String
+    Unique: true
+    NamingProperty: false
+  - Name: conditionofmovie
+    Type: String
+    Unique: true
+    NamingProperty: false
+  - Name: bookauthor
+    Type: String
+    Unique: true
+    NamingProperty: false
+  - Name: descriptionofmusic
+    Type: String
+    Unique: true
+    NamingProperty: false
+  - Name: bookpage
+    Type: String
+    Unique: true
+    NamingProperty: false
+  - Name: eventcity
+    Type: String
+    Unique: true
+    NamingProperty: false
+  - Name: priceofmusic
+    Type: String
+    Unique: true
+    NamingProperty: false
+  - Name: nameofevent
     Type: String
     Unique: true
     NamingProperty: false
@@ -14,51 +66,47 @@
     Type: String
     Unique: true
     NamingProperty: false
-  - Name: startOfEvent
+  - Name: conditionofmusic
     Type: String
     Unique: true
     NamingProperty: false
-  - Name: publisher
+  - Name: descriptionofmovie
     Type: String
     Unique: true
     NamingProperty: false
-  - Name: name
+  - Name: sender
     Type: String
     Unique: true
     NamingProperty: false
-  - Name: condition
+  - Name: imageofevent
     Type: String
     Unique: true
     NamingProperty: false
-  - Name: price
+  - Name: nameofmusic
     Type: String
     Unique: true
     NamingProperty: false
-  - Name: author
+  - Name: imageofbook
     Type: String
     Unique: true
     NamingProperty: false
-  - Name: pageCount
+  - Name: imageofmovie
     Type: String
     Unique: true
     NamingProperty: false
-  - Name: categoryType
+  - Name: priceofevent
     Type: String
     Unique: true
     NamingProperty: false
-  - Name: description
+  - Name: priceofmovie
     Type: String
     Unique: true
     NamingProperty: false
-  - Name: image
+  - Name: imageofmusic
     Type: String
     Unique: true
     NamingProperty: false
-  - Name: categoryOfBook
-    Type: String
-    Unique: true
-    NamingProperty: false
-  - Name: location
+  - Name: bookcategory
     Type: String
     Unique: true
     NamingProperty: false
@@ -70,7 +118,27 @@
     Type: String
     Unique: true
     NamingProperty: false
-  RelatedResources: [category, giftBuy]
+  RelatedResources: [category, giftApprove, giftDecline, giftBuy]
+
+- !!eu.fp7.scase.inputParser.YamlResource
+  Name: giftApprove
+  IsAlgorithmic: true
+  IsExternalService: false
+  CRUDActivities: []
+  InputRepresentation: JSON
+  OutputRepresentation: JSON
+  Properties: []
+  RelatedResources: []
+
+- !!eu.fp7.scase.inputParser.YamlResource
+  Name: giftDecline
+  IsAlgorithmic: true
+  IsExternalService: false
+  CRUDActivities: []
+  InputRepresentation: JSON
+  OutputRepresentation: JSON
+  Properties: []
+  RelatedResources: []
 
 - !!eu.fp7.scase.inputParser.YamlResource
   Name: giftBuy
@@ -103,32 +171,6 @@
   RelatedResources: []
 
 - !!eu.fp7.scase.inputParser.YamlResource
-  Name: type
-  IsAlgorithmic: false
-  IsExternalService: false
-  CRUDActivities: []
-  InputRepresentation: JSON
-  OutputRepresentation: JSON
-  Properties:
-  - Name: book
-    Type: String
-    Unique: true
-    NamingProperty: false
-  - Name: movy
-    Type: String
-    Unique: true
-    NamingProperty: false
-  - Name: music
-    Type: String
-    Unique: true
-    NamingProperty: false
-  - Name: event
-    Type: String
-    Unique: true
-    NamingProperty: false
-  RelatedResources: [category]
-
-- !!eu.fp7.scase.inputParser.YamlResource
   Name: username
   IsAlgorithmic: false
   IsExternalService: false
@@ -149,46 +191,6 @@
   RelatedResources: []
 
 - !!eu.fp7.scase.inputParser.YamlResource
-  Name: lastName
-  IsAlgorithmic: false
-  IsExternalService: false
-  CRUDActivities: [Read]
-  InputRepresentation: JSON
-  OutputRepresentation: JSON
-  Properties: []
-  RelatedResources: [account]
-
-- !!eu.fp7.scase.inputParser.YamlResource
-  Name: friend
-  IsAlgorithmic: false
-  IsExternalService: false
-  CRUDActivities: [Read]
-  InputRepresentation: JSON
-  OutputRepresentation: JSON
-  Properties: []
-  RelatedResources: [friendSelect, category, logout]
-
-- !!eu.fp7.scase.inputParser.YamlResource
-  Name: friendSelect
-  IsAlgorithmic: true
-  IsExternalService: false
-  CRUDActivities: []
-  InputRepresentation: JSON
-  OutputRepresentation: JSON
-  Properties: []
-  RelatedResources: []
-
-- !!eu.fp7.scase.inputParser.YamlResource
-  Name: firstName
-  IsAlgorithmic: false
-  IsExternalService: false
-  CRUDActivities: [Read]
-  InputRepresentation: JSON
-  OutputRepresentation: JSON
-  Properties: []
-  RelatedResources: [account]
-
-- !!eu.fp7.scase.inputParser.YamlResource
   Name: category
   IsAlgorithmic: false
   IsExternalService: false
@@ -196,41 +198,11 @@
   InputRepresentation: JSON
   OutputRepresentation: JSON
   Properties:
-  - Name: book
-    Type: String
-    Unique: true
-    NamingProperty: false
-  - Name: name
-    Type: String
-    Unique: true
-    NamingProperty: false
-  - Name: music
-    Type: String
-    Unique: true
-    NamingProperty: false
-  - Name: movy
-    Type: String
-    Unique: true
-    NamingProperty: false
-  - Name: event
-    Type: String
-    Unique: true
-    NamingProperty: false
   - Name: type
     Type: String
     Unique: true
     NamingProperty: false
-  RelatedResources: [categoryBe, gift, categorySelect]
-
-- !!eu.fp7.scase.inputParser.YamlResource
-  Name: categoryBe
-  IsAlgorithmic: true
-  IsExternalService: false
-  CRUDActivities: []
-  InputRepresentation: JSON
-  OutputRepresentation: JSON
-  Properties: []
-  RelatedResources: []
+  RelatedResources: [categorySelect, gift]
 
 - !!eu.fp7.scase.inputParser.YamlResource
   Name: categorySelect
@@ -243,20 +215,10 @@
   RelatedResources: []
 
 - !!eu.fp7.scase.inputParser.YamlResource
-  Name: email
-  IsAlgorithmic: false
-  IsExternalService: false
-  CRUDActivities: [Read]
-  InputRepresentation: JSON
-  OutputRepresentation: JSON
-  Properties: []
-  RelatedResources: [account]
-
-- !!eu.fp7.scase.inputParser.YamlResource
   Name: account
   IsAlgorithmic: false
   IsExternalService: false
-  CRUDActivities: [Update, Read, Create]
+  CRUDActivities: [Read, Create]
   InputRepresentation: JSON
   OutputRepresentation: JSON
   Properties:
@@ -291,34 +253,14 @@
   RelatedResources: []
 
 - !!eu.fp7.scase.inputParser.YamlResource
-  Name: hometown
+  Name: friend
   IsAlgorithmic: false
   IsExternalService: false
   CRUDActivities: [Read]
   InputRepresentation: JSON
   OutputRepresentation: JSON
   Properties: []
-  RelatedResources: [account]
-
-- !!eu.fp7.scase.inputParser.YamlResource
-  Name: application
-  IsAlgorithmic: false
-  IsExternalService: false
-  CRUDActivities: []
-  InputRepresentation: JSON
-  OutputRepresentation: JSON
-  Properties: []
-  RelatedResources: [applicationLogout]
-
-- !!eu.fp7.scase.inputParser.YamlResource
-  Name: applicationLogout
-  IsAlgorithmic: true
-  IsExternalService: false
-  CRUDActivities: []
-  InputRepresentation: JSON
-  OutputRepresentation: JSON
-  Properties: []
-  RelatedResources: []
+  RelatedResources: [category, logout]
 
 - !!eu.fp7.scase.inputParser.YamlResource
   Name: password
@@ -339,16 +281,6 @@
   OutputRepresentation: JSON
   Properties: []
   RelatedResources: []
-
-- !!eu.fp7.scase.inputParser.YamlResource
-  Name: location
-  IsAlgorithmic: false
-  IsExternalService: false
-  CRUDActivities: [Read]
-  InputRepresentation: JSON
-  OutputRepresentation: JSON
-  Properties: []
-  RelatedResources: [account]
 
 - !!eu.fp7.scase.inputParser.YamlResource
   Name: login

@@ -89,4 +89,61 @@ ANNOTATIONS
 8:R1	IsActorOf 8:T1 8:T2
 8:T3	Object 33 37	gift
 8:R2	ActsOn 8:T2 8:T3
+7:T1	Actor 2 8	client
+7:T2	Action 13 17	read
+7:T3	Object 18 22	gift
+7:T4	Property 32 43	nameOfMovie
+7:T5	Property 44 55	nameOfMusic
+7:T6	Property 56 67	nameOfEvent
+7:T7	Property 68 78	nameOfBook
+7:T8	Property 80 89	recipient
+7:T9	Property 91 97	sender
+7:T10	Property 99 111	imageOfMovie
+7:T11	Property 113 125	imageOfMusic
+7:T12	Property 127 138	imageOfBook
+7:T13	Property 140 152	imageOfEvent
+7:T14	Property 154 166	priceOfMovie
+7:T15	Property 168 180	priceOfMusic
+7:T16	Property 182 193	priceOfBook
+7:T17	Property 195 207	priceOfEvent
+7:T18	Property 209 225	conditionOfMovie
+7:T19	Property 227 243	conditionOfMusic
+7:T20	Property 245 263	descriptionOfMusic
+7:T21	Property 264 282	descriptionOfMovie
+7:T22	Property 283 301	descriptionOfEvent
+7:T23	Property 303 314	bookAuthors
+7:T24	Property 316 329	bookPublisher
+7:T25	Property 331 343	bookCategory
+7:T26	Property 345 354	bookPages
+7:T27	Property 356 366	eventStart
+7:T28	Property 368 377	eventCity
+7:T29	Property 379 391	eventCountry
+7:R1	HasProperty 7:T3 7:T12
+7:R2	HasProperty 7:T3 7:T9
+7:R3	HasProperty 7:T3 7:T13
+7:R4	HasProperty 7:T3 7:T10
+7:R5	HasProperty 7:T3 7:T11
+7:R6	HasProperty 7:T3 7:T16
+7:R7	HasProperty 7:T3 7:T17
+7:R8	HasProperty 7:T3 7:T14
+7:R9	HasProperty 7:T3 7:T15
+7:R10	HasProperty 7:T3 7:T4
+7:R11	HasProperty 7:T3 7:T18
+7:R12	HasProperty 7:T3 7:T19
+7:R13	HasProperty 7:T3 7:T6
+7:R14	HasProperty 7:T3 7:T5
+7:R15	HasProperty 7:T3 7:T8
+7:R16	HasProperty 7:T3 7:T7
+7:R17	HasProperty 7:T3 7:T20
+7:R18	HasProperty 7:T3 7:T23
+7:R19	HasProperty 7:T3 7:T24
+7:R20	HasProperty 7:T3 7:T21
+7:R21	HasProperty 7:T3 7:T22
+7:R22	HasProperty 7:T3 7:T27
+7:R23	HasProperty 7:T3 7:T28
+7:R24	HasProperty 7:T3 7:T25
+7:R25	HasProperty 7:T3 7:T26
+7:R26	HasProperty 7:T3 7:T29
+7:R27	ActsOn 7:T2 7:T3
+7:R28	IsActorOf 7:T1 7:T2
 ------------
