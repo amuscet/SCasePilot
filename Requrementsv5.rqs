@@ -1,0 +1,96 @@
+REQUIREMENTS
+------------
+A client must be able to create an account by providing a Facebook username and a Facebook password.
+A client must be able to get first name, last name, location, hometown and email of account. 
+A client must be able to login with username and password.
+A client must be able to logout from the application.
+A client must be able to read a list of friends.
+A client must be able to select a gift category of type music, books, events and movies.
+A client must be able to buy the gift for a target friend.
+A client can read movieGift has nameOfMovie, imageOfMovie, priceOfMovie, conditionOfMovie, descriptionOfMovie, recipentOfMovie,senderOfMovie, statusOfMovie.
+A client can read musicGift has nameOfMovie, imageOfMusic, priceOfMusic, conditionOfMusic, descriptionOfMusic, recipentOfMusic, senderOfMusic, statusOfMusic.
+A client can read bookGift has titleOfBook, authorsOfBook, publisherOfBook, languageOfBook, categoryOfBook, pagesOfBook, amountBook, currencyBook, thumbnailBook, recipentOfBook, senderOfBook, statusOfBook.
+A client can read eventGift has titleOfEvent, cityOfEvent, coutryOfEvent, priceOfEvent, startTimeEvent, imageOfEvent, descriptionOfEvent, recipentOfEvent, senderOfEvent, statusOfEvent. 
+A client must be able to read sent gifts.
+A client must be able to read received gifts.
+A client must be able to approve or decline the gift.
+------------
+
+ANNOTATIONS
+------------
+1:R1	IsActorOf 1:T2 1:T1
+1:R2	ActsOn 1:T1 1:T3
+1:T1	Action 25 31	create
+1:T2	Actor 2 8	client
+1:T3	Object 35 42	account
+2:R3	IsActorOf 2:T4 2:T1
+2:T1	Action 25 28	get
+2:T4	Actor 2 8	client
+3:R1	IsActorOf 3:T2 3:T1
+3:R2	ActsOn 3:T1 3:T3
+3:R3	ActsOn 3:T1 3:T4
+3:T1	Action 25 30	login
+3:T2	Actor 2 8	client
+3:T3	Object 49 57	password
+3:T4	Object 36 44	username
+4:R1	IsActorOf 4:T2 4:T1
+4:R2	ActsOn 4:T1 4:T3
+4:T1	Action 25 31	logout
+4:T2	Actor 2 8	client
+4:T3	Object 41 52	application
+5:R2	IsActorOf 5:T3 5:T1
+5:T1	Action 25 29	read
+5:T3	Actor 2 8	client
+6:R1	IsActorOf 6:T2 6:T1
+6:T1	Action 25 31	select
+6:T2	Actor 2 8	client
+7:R2	IsActorOf 7:T3 7:T1
+7:R3	ActsOn 7:T1 7:T4
+7:T1	Action 25 28	buy
+7:T3	Actor 2 8	client
+7:T4	Object 33 37	gift
+12:R1	ActsOn 12:T1 12:T2
+12:R2	IsActorOf 12:T3 12:T1
+12:R3	HasProperty 12:T2 12:T4
+12:T1	Action 25 29	read
+12:T2	Object 35 40	gifts
+12:T3	Actor 2 8	client
+12:T4	Property 30 34	sent
+13:R1	ActsOn 13:T1 13:T2
+13:R2	IsActorOf 13:T3 13:T1
+13:R3	HasProperty 13:T2 13:T4
+13:T1	Action 25 29	read
+13:T2	Object 39 44	gifts
+13:T3	Actor 2 8	client
+13:T4	Property 30 38	received
+14:R1	ActsOn 14:T1 14:T2
+14:R2	IsActorOf 14:T3 14:T1
+14:R3	ActsOn 14:T4 14:T2
+14:R4	IsActorOf 14:T3 14:T4
+14:T1	Action 25 32	approve
+14:T2	Object 48 52	gift
+14:T3	Actor 2 8	client
+14:T4	Action 36 43	decline
+1:T4	Property 67 75	username
+1:T5	Property 91 99	password
+1:R3	HasProperty 1:T3 1:T5
+1:R4	HasProperty 1:T3 1:T4
+2:T2	Object 84 91	account
+2:T3	Property 75 80	email
+2:T5	Property 62 70	hometown
+2:T6	Property 52 60	location
+2:T7	Property 41 50	last name
+2:T8	Property 29 39	first name
+6:T3	Object 39 47	category
+6:T4	Object 34 38	gift
+6:R2	RelatesTo 6:T4 6:T3
+6:T5	Property 51 55	type
+6:R3	HasProperty 6:T3 6:T5
+5:T2	Object 40 47	friends
+5:R1	ActsOn 5:T1 5:T2
+2:R2	HasProperty 2:T2 2:T3
+2:R4	HasProperty 2:T2 2:T7
+2:R1	HasProperty 2:T2 2:T8
+2:R5	HasProperty 2:T2 2:T6
+2:R6	HasProperty 2:T2 2:T5
+------------
