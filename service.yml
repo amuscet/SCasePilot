@@ -6,15 +6,15 @@
   InputRepresentation: JSON
   OutputRepresentation: JSON
   Properties:
-  - Name: sent
-    Type: String
-    Unique: true
-    NamingProperty: false
   - Name: received
     Type: String
     Unique: true
     NamingProperty: false
-  RelatedResources: [category, giftBuy, userlogout, giftApprove, giftDecline]
+  - Name: sent
+    Type: String
+    Unique: true
+    NamingProperty: false
+  RelatedResources: [category, giftBuy, giftApprove, giftDecline]
 
 - !!eu.fp7.scase.inputParser.YamlResource
   Name: giftBuy
@@ -67,70 +67,10 @@
   RelatedResources: []
 
 - !!eu.fp7.scase.inputParser.YamlResource
-  Name: userlogout
-  IsAlgorithmic: false
-  IsExternalService: false
-  CRUDActivities: []
-  InputRepresentation: JSON
-  OutputRepresentation: JSON
-  Properties: []
-  RelatedResources: [userlogoutUserlogout]
-
-- !!eu.fp7.scase.inputParser.YamlResource
-  Name: userlogoutUserlogout
-  IsAlgorithmic: true
-  IsExternalService: false
-  CRUDActivities: []
-  InputRepresentation: JSON
-  OutputRepresentation: JSON
-  Properties: []
-  RelatedResources: []
-
-- !!eu.fp7.scase.inputParser.YamlResource
-  Name: friend
-  IsAlgorithmic: false
-  IsExternalService: false
-  CRUDActivities: [Read]
-  InputRepresentation: JSON
-  OutputRepresentation: JSON
-  Properties: []
-  RelatedResources: [friendSelect, category, userlogout]
-
-- !!eu.fp7.scase.inputParser.YamlResource
-  Name: friendSelect
-  IsAlgorithmic: true
-  IsExternalService: false
-  CRUDActivities: []
-  InputRepresentation: JSON
-  OutputRepresentation: JSON
-  Properties: []
-  RelatedResources: []
-
-- !!eu.fp7.scase.inputParser.YamlResource
-  Name: facebooklogin
-  IsAlgorithmic: false
-  IsExternalService: false
-  CRUDActivities: []
-  InputRepresentation: JSON
-  OutputRepresentation: JSON
-  Properties: []
-  RelatedResources: [facebookloginFacebooklogin, friend]
-
-- !!eu.fp7.scase.inputParser.YamlResource
-  Name: facebookloginFacebooklogin
-  IsAlgorithmic: true
-  IsExternalService: false
-  CRUDActivities: []
-  InputRepresentation: JSON
-  OutputRepresentation: JSON
-  Properties: []
-  RelatedResources: []
-
-- !!eu.fp7.scase.inputParser.YamlResource
   Name: category
   IsAlgorithmic: false
   IsExternalService: false
-  CRUDActivities: [Read]
+  CRUDActivities: []
   InputRepresentation: JSON
   OutputRepresentation: JSON
   Properties:
@@ -138,16 +78,6 @@
     Type: String
     Unique: true
     NamingProperty: false
-  RelatedResources: [categorySelect, gift]
-
-- !!eu.fp7.scase.inputParser.YamlResource
-  Name: categorySelect
-  IsAlgorithmic: true
-  IsExternalService: false
-  CRUDActivities: []
-  InputRepresentation: JSON
-  OutputRepresentation: JSON
-  Properties: []
   RelatedResources: []
 
 - !!eu.fp7.scase.inputParser.YamlResource
@@ -186,6 +116,16 @@
     Type: String
     Unique: true
     NamingProperty: false
+  RelatedResources: []
+
+- !!eu.fp7.scase.inputParser.YamlResource
+  Name: friend
+  IsAlgorithmic: false
+  IsExternalService: false
+  CRUDActivities: [Read]
+  InputRepresentation: JSON
+  OutputRepresentation: JSON
+  Properties: []
   RelatedResources: []
 
 - !!eu.fp7.scase.inputParser.YamlResource
